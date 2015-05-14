@@ -84,7 +84,7 @@ public class AccountController {
 		if(!br.hasErrors() ){
 			Role role = new Role();
 			role.setRole("1");
-			account.setRole(role);
+			account.getRole().add(role);
 			accountService.save(account);
 			viewName = "redirect:accounts";
 		} else{
@@ -98,7 +98,7 @@ public class AccountController {
 	 * cancel the new/edit account action
 	 * @return redirect to book list
 	 */
-	@RequestMapping(params="cancel" ,method = RequestMethod.GET)
+	@RequestMapping(params="cancel" ,method = RequestMethod.POST)
 	public String cancel(){
 		
 		return "redirect:accounts";

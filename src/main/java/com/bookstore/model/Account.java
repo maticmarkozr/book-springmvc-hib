@@ -1,12 +1,16 @@
 package com.bookstore.model;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.Valid;
@@ -14,6 +18,10 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
+
+
+
+
 
 
 
@@ -68,7 +76,7 @@ public class Account extends AbstractBaseEntity{
    
     @NotNull
 	@Min(value = 4 , message="Password must be at least 4 characters.")
-	@Column(nullable = false)
+	@Column(nullable = false, length = 60)
     //@Pattern(regexp = "^[0-9a-zA-Z. ]+$") //(?=.*[a-z])(?=.*[A-Z]{16,})
     private String password;
     
@@ -89,9 +97,9 @@ public class Account extends AbstractBaseEntity{
     /**
      * Role of account
      */
-    @JoinColumn(name = "role_id")
-    @OneToOne(mappedBy="account", cascade={CascadeType.ALL})
-    private Role role;
+    
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "account")  
+    private Set<Role> role = new HashSet<>(0);  
 
 	public String getFirstName() {
 		return firstName;
@@ -148,8 +156,6 @@ public class Account extends AbstractBaseEntity{
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
-	
 	
 	public String getStreet() {
 		return street;
@@ -176,13 +182,15 @@ public class Account extends AbstractBaseEntity{
 		this.country = country;
 	}
 
-	public Role getRole() {
+	public Set<Role> getRole() {
 		return role;
 	}
 
-	public void setRole(Role role) {
+	public void setRole(Set<Role> role) {
 		this.role = role;
 	}
+
+	
 
 
 }
