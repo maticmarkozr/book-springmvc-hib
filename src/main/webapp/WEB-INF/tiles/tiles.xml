@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="standardLayout" template="/WEB-INF/jsp/layout/standardLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="content" value="" />
+	</definition>
+	
+	<definition name="home" extends="standardLayout">
+		<put-attribute name="title" value="Home" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/home.jsp" />
+	</definition>
+	<definition name="categories" extends="standardLayout">
+		<put-attribute name="title" value="Categories" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/category/categories.jsp" />
+	</definition>
+	<definition name="addCatEdit" extends="standardLayout">
+		<put-attribute name="title" value="Add/Edit Category" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/category/addCatEdit.jsp" />
+	</definition>
+	<definition name="books" extends="standardLayout">
+		<put-attribute name="title" value="Books" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/book/books.jsp" />
+	</definition>
+	<definition name="addBookEdit" extends="standardLayout">
+		<put-attribute name="title" value="Add/Edit Book" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/book/addBookEdit.jsp" />
+	</definition>
+	<definition name="accounts" extends="standardLayout">
+		<put-attribute name="title" value="Accounts" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/account/accounts.jsp" />
+	</definition>
+	<definition name="addEditAccount" extends="standardLayout">
+		<put-attribute name="title" value="Add/Edit Accounts" />
+		<put-attribute name="content" value="/WEB-INF/jsp/content/account/addEditAccount.jsp" />
+	</definition>
+</tiles-definitions>

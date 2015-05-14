@@ -1,0 +1,62 @@
+@CHARSET "UTF-8";
+
+
+
+/*------------------------Base------------------------*/
+html {
+	font-family: sans-serif;
+	/* 1 */
+	-webkit-text-size-adjust: 100%;
+	/* 2 */
+	-ms-text-size-adjust: 100%;
+	/* 2 */
+	-webkit-font-smoothing: antialiased;
+	background-color: #E5DEDE;
+}
+body {
+	margin: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	
+}
+
+h1 {
+	font-size: 2em;
+}
+
+
+/*------------------------Links------------------------*/
+a {
+	text-decoration: none;
+	color:#D34613;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+/*
+* Improves readability when focused and also mouse hovered in all browsers.
+*/
+a, a:hover, a:active, a:visited {
+	outline: none;
+}
+
+header{
+	background-color: #770404;
+	color:white;
+}
+
+#mainMenu{
+	background-color: #4C0000;
+	color: white;
+	list-style-type: square;
+}
+
+#mainContent{
+	background-color: white;
+	color: black;
+}
+footer{
+	text-align: center;
+}
