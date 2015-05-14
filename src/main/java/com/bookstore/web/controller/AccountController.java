@@ -83,7 +83,7 @@ public class AccountController {
 		
 		if(!br.hasErrors() ){
 			Role role = new Role();
-			role.setRole(1);
+			role.setRole("1");
 			account.setRole(role);
 			accountService.save(account);
 			viewName = "redirect:accounts";

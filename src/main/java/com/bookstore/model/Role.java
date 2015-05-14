@@ -1,6 +1,10 @@
 package com.bookstore.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -18,10 +22,12 @@ public class Role extends AbstractBaseEntity{
 	 */
 	private static final long serialVersionUID = 2476541772999529688L;
 	
-	@OneToOne
+	@ManyToOne(fetch = FetchType.LAZY) 
+	@JoinColumn(name = "username", nullable = false) 
 	private Account account;
 	
-	private Integer role;
+	@Column(name = "role", nullable = false, length = 45)  
+	private String role;
 
 	public Account getAccount() {
 		return account;
@@ -31,11 +37,11 @@ public class Role extends AbstractBaseEntity{
 		this.account = account;
 	}
 
-	public Integer getRole() {
+	public String getRole() {
 		return role;
 	}
 
-	public void setRole(Integer role) {
+	public void setRole(String role) {
 		this.role = role;
 	}
 	
