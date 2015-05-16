@@ -34,4 +34,20 @@
 		<put-attribute name="title" value="Add/Edit Accounts" />
 		<put-attribute name="content" value="/WEB-INF/jsp/content/account/addEditAccount.jsp" />
 	</definition>
+<!-- 	<definition name="login" extends="standardLayout"> -->
+<!-- 		<put-attribute name="title" value="Login" /> -->
+<!-- 		<put-attribute name="content" value="/WEB-INF/jsp/access/login.jsp" /> -->
+<!-- 	</definition> -->
+<!-- 	<definition name="denied" extends="standardLayout"> -->
+<!-- 		<put-attribute name="title" value="Denied" /> -->
+<!-- 		<put-attribute name="content" value="/WEB-INF/jsp/access/denied.jsp" /> -->
+<!-- 	</definition> -->
+<!-- 	<definition name="admin" extends="standardLayout"> -->
+<!-- 		<put-attribute name="title" value="Admin" /> -->
+<!-- 		<put-attribute name="content" value="/WEB-INF/jsp/admin.jsp" /> -->
+<!-- 	</definition> -->
+<!-- 	<definition name="user" extends="standardLayout"> -->
+<!-- 		<put-attribute name="title" value="User" /> -->
+<!-- 		<put-attribute name="content" value="/WEB-INF/jsp/user.jsp" /> -->
+<!-- 	</definition> -->
 </tiles-definitions>

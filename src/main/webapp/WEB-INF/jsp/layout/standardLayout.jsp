@@ -25,10 +25,17 @@
 		<p>Welcome <sec:authentication property="name"></sec:authentication>!</p>
 		<h1><fmt:message key="common.header.title"/></h1>
 		<ul id="mainMenu">
+			
 			<li><a href="<c:url value="/home"/>"><fmt:message key="common.menu.home"/></a></li>
+			
 			<li><a href="<c:url value="/categories"/>"><fmt:message key="common.menu.categories"/></a></li>
+			
 			<li><a href="<c:url value="/books"/>"><fmt:message key="common.menu.books"/></a></li>
+			
 			<li><a href="<c:url value="/accounts"/>"><fmt:message key="common.menu.accounts"/></a></li>
+			
+			
+			
 		</ul>
 	</header>
 	<section id="mainContent">
