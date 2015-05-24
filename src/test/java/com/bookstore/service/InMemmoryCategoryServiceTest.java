@@ -1,5 +1,7 @@
 package com.bookstore.service;
 
+import java.util.List;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,6 +38,10 @@ public class InMemmoryCategoryServiceTest {
 	
 	@Test
 	public void testFindAll(){
-		//to do
+		
+		List<Category> categoryAll = catService.findAll();
+		
+		Assert.assertNotNull(categoryAll);
+		Assert.assertTrue(categoryAll.size() == 2 );
 	}
 }
