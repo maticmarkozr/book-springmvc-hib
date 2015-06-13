@@ -14,9 +14,6 @@ import javax.validation.constraints.Pattern;
 @Table(name="book")
 public class Book extends AbstractBaseEntity{
 	
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 2622508152191407050L;
 	
 	@Pattern(regexp = "^(?=\\s*\\S).*$")
